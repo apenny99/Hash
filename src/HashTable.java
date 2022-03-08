@@ -43,14 +43,20 @@ public class HashTable {
 
     }
 
-//    public String get(String key){
-//
-//    }
+    public String get(String key){
+        int index=hash(key);
+        if(index>= table.length){
+            System.out.println("null");
+            return null;
+        }
+        return table[index];
+    }
 
     public static void main(String[] args) {
         HashTable test=new HashTable(999);
         System.out.println(test.put("August","Mareks"));
         System.out.println(test.put("August","Mareks"));
+        System.out.println(test.get("August"));
     }
 
 }
